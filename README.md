@@ -7,3 +7,5 @@ An example of setting up Spring-Boot with Spark with simple word count applicati
 5) Else in shot you can call $ spark-springboot> mvn clean install spring-boot:run -e <br>
 6) You can hit http://localhost:8080/api/wordcount to view the output. <br>
 7) You can also visualize your spark-jobs execution using http://localhost:4040/ <br>
+
+# Todo with OpenShift Oshninko Cluster
