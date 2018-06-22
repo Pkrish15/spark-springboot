@@ -8,4 +8,14 @@ An example of setting up Spring-Boot with Spark with simple word count applicati
 6) You can hit http://localhost:8080/api/wordcount to view the output. <br>
 7) You can also visualize your spark-jobs execution using http://localhost:4040/ <br>
 
-# Todo with OpenShift Oshninko Cluster
+# OpenShift Oshninko Cluster
+8) oc new-project demo <br>
+9) oc create -f https://raw.githubusercontent.com/Pkrish15/spark-drools/master/resources.yaml <br>
+10) oc new-app oshinko-webui <br>
+11) oc get routes <br>
+12) oc new-app --template oshinko-java-spark-build-dc \
+    -p APPLICATION_NAME=spark-springboot \
+    -p APP_MAIN_CLASS=com.redhat.gpte.SparkExperimentApplication \
+    -p GIT_URI=https://github.com/Pkrish15/spark-springboot \
+    -p APP_FILE=spark-springboot.jar  <br>
+
